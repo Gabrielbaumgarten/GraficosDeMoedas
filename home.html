@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src='charts.js'></script>
+    <script src='info-adicional.js'></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body onLoad="start()">
+
+    <div class="Menu">
+
+        <div class="Logo">
+            <img src="img/logo.png">
+            <h2>Exchange</h2>
+        </div>
+
+        <div class="Moedas">
+            <button id='buttonDolar' onClick="Dolar()">
+                <img src="img/dolar.png">
+                <h3>Dolar</h3>
+            </button>
+
+            <button id='buttonEuro' onClick="Euro()">
+                <img src="img/euro.png">
+                <h3>Euro</h3>
+            </button>
+
+            <button id='buttonLibra' onClick="Libra()">
+                <img src="img/libra.png">
+                <h3>Libra</h3>
+            </button>
+        </div>
+
+        <div class="Informacoes-complementares">
+            <button onClick="montaInfo('graficos','ajuda','sobre','TextoSobre')">
+                <img src="img/informacao.png">
+                <h3>Sobre</h3>
+            </button>
+
+            <button onClick="montaInfo('graficos','sobre','ajuda','TextoAjuda')">
+                <img src="img/duvida.png">
+                <h3>Ajuda</h3>
+            </button>
+        </div>
+
+
+    </div>
+
+    <div class="Conteudo">
+
+        <div class="barra-navegacao">
+            <h2 id='nomeMoeda'>Dolar</h2>
+
+            <div class='Filtros'>
+                <label for="inicio">Início:</label>
+                <input type="date" id="inicio" value="2021-07-26">
+                <label for="fim">Fim:</label>
+                <input type="date" id="fim" value="2021-07-27">
+                <button onClick="Pesquisar()">
+                    <h3>Pesquisar</h3>
+                </button>
+
+            </div>
+        </div>
+
+        <div id='graficos' class="Graficos"></div>
+
+        <div id='sobre' class="Sobre"></div>
+
+        <div id='ajuda' class="Ajuda"></div>
+    </div>
+
+
+</body>
+
+</html>
